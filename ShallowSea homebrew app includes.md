@@ -9,7 +9,7 @@
 | [HekateBrew](https://github.com/bemardev/HekateBrew/) | check it from [here](https://github.com/bemardev/HekateBrew/#features) |
 | [amiigo](https://github.com/CompSciOrBust/Amiigo) | A GUI for Emuiibo |
 | [AtmoXL-Titel-Installer](https://github.com/dezem/AtmoXL-Titel-Installer) | NSP, NSZ, XCI, and XCZ Installer for Nintendo Switch |
-| [goldlef](https://github.com/XorTroll/Goldleaf) | check function from [here](https://github.com/XorTroll/Goldleaf#features) |
+| [goldleaf](https://github.com/XorTroll/Goldleaf) | check function from [here](https://github.com/XorTroll/Goldleaf#features) |
 | [ftpd pro](https://github.com/mtheall/ftpd) | Allows file transfer over local network via ftp | 
 | [idn_mitm](https://github.com/spacemeowx2/ldn_mitm) | lan play |
 | [sysdvr](https://github.com/exelix11/SysDVR) | allows capturing the running game output to a pc via USB or network connection |
