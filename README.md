@@ -7,7 +7,7 @@ The All-in-One CFW package for the Nintendo Switch with Atmosphere (fusee primar
 * You can download rcmloader package from [here](https://github.com/carcaschoi/rcmloader-package)
 * You can download switch firmware from [here](https://darthsternie.net/switch-firmwares/)
 * you may check [here](https://github.com/carcaschoi/ShallowSea/blob/main/ShallowSea%20homebrew%20app%20includes.md) to know what homebrew apps are included in ShallowSea
-### My youtube channel : https://youtube.com/channel/UCgM5UuqyJQl38V8FI1l0wXw (Mainly NS aspect expands the software usage method 😄)
+### The youtube channel of carcaschoi : https://youtube.com/channel/UCgM5UuqyJQl38V8FI1l0wXw (Mainly NS aspect expands the software usage method 😄)
 # Feature
 * always up-to-date atmosphere with sigpatch
 * I have already setup hbg shop, [here is the setting](https://github.com/carcaschoi/ShallowSea/blob/main/tinfoil%20shop%20setup)
