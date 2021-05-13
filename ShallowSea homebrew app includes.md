@@ -44,5 +44,10 @@
 | [sysclk](https://github.com/retronx-team/sys-clk) | overclock switch |
 | [sx gear](https://sx.xecuter.com) | redirect sxos payload to hekate payload |
 | some nsp forwarder in (NSP) folder | run some homebrew app on non-applet mode |
+| [sys-botbase](https://github.com/olliz0r/sys-botbase) | The purpose of this sys-module is to allow users to remote control their switch via wifi connection as well as to read and write to a games memory. |
+| [Simple Manager Mod](https://github.com/nadrino/SimpleModManager) | SimpleModManager is an homebrew app for the Nintendo Switch CFW : Atmosphere. It allows to manage your mods (via LayeredFS). |
+| [sys-screenuploader](https://github.com/bakatrouble/sys-screenuploader) | Homebrew Nintendo Switch NSP sysmodule for automatic upload of screen captures to remote server. |
+| [sys-tune](https://github.com/HookedBehemoth/sys-tune) | Background audio player for the Nintendo switch + Tesla overlay |
+| [TinLeaf](https://github.com/blawar/tinleaf) | A No-Bullshit-No-Bullshit NSP, NSZ, XCI, and XCZ Installer for Nintendo Switch |
 
 and much more......
