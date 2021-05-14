@@ -30,4 +30,4 @@ Nobody is responsible if you lose your data, brick your Switch, get banned, drop
 * [@tim22263](https://github.com/tim22263) 一 Bootlogo & hbmenu theme (making the custom bootlogo & hbmenu theme for aio package.)
 * [91wii論壇網友分析ShallowSea整合包](
 https://www.91wii.com/thread-231061-1-1.html) Make a chinese review for ShallowSea aio package. (The Chinese language has been removed, but i leave  credit for the work!)
-* [@yanisdreemurr](https://github.com/yanisdreemurr) 一 Creator o this Fork.
+* [@yanisdreemurr](https://github.com/yanisdreemurr) 一 Creator of this Fork.
