@@ -1,4 +1,4 @@
-# Atmosphere creates sd file virtual system 
+# Create an Emunand is not recommended if you want to use online for example: sys-botbase and others stuffs.
 * Need to make sure there is 32gb free space on the microSD card
 1. Enter the UI interface of the hekate menu
 
