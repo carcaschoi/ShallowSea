@@ -1,4 +1,4 @@
-# It's a fork that removes, sxos, 90DNS and others stuff ..., the real project is right here (https://github.com/carcaschoi/ShallowSea)
+# [It's a fork that removes, sxos, 90DNS and others stuffs ..., the real project is right here](https://github.com/carcaschoi/ShallowSea)
 
 ![ShallowSea image](https://user-images.githubusercontent.com/64573431/115142050-358bc380-a072-11eb-855b-357475e4f3d7.jpg)
 # [Click here to see the guide](https://github.com/yanisdreemurr/ShallowSea/blob/main/User%20guide.md)
