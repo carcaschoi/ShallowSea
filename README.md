@@ -17,8 +17,8 @@ The All-in-One CFW package for the Nintendo Switch with Atmosphere (fusee primar
 * [Alipay](https://user-images.githubusercontent.com/64573431/114517581-0ee41c00-9c71-11eb-8230-d6b029fc9cc2.jpg)
 * [Bank card](https://user-images.githubusercontent.com/64573431/114518848-5fa84480-9c72-11eb-95aa-7809a6e3332d.jpg) - Chan Wai Hing
 
-# To do list
-* Create wiki to tidy up readme file.
+# Wiki
+[The wiki is here!](https://github.com/yanisdreemurr/ShallowSea-Fork/wiki)
 
 # Liability:
 Nobody is responsible if you lose your data, brick your Switch, get banned, drop your Switch into the toilet, have your Switch stolen by ninjas, [etc 1](https://www.youtube.com/watch?v=XnwvYiMK3ik) [etc 2](https://www.youtube.com/playlist?list=PLK6G4JP74vhF7UQwzdcXfG2eLclu-GcEc), except yourself. By using ShallowSea or any form of homebrew in any capacity you understand the risks involved with running unsigned code on your Switch.
