@@ -1,0 +1,135 @@
+printf("TegraScript system wiper")
+printf("")
+printf("Press A to wipe from SYSMMC")
+if (@EMUMMC){
+    printf("Press Y to wipe from EMUMMC")
+}
+printf("Press power to exit")
+printf("")
+
+pause() 
+@checkInput = setInt(0);
+
+if (@BTN_A){
+    printf("Mounting SYSMMC...") 
+    mmc_connect("SYSMMC")
+    @checkInput = setInt(1);
+}
+if (@BTN_Y){
+    if (@EMUMMC, == , 0){
+        exit() 
+    }
+    printf("Mounting EMUMMC...") 
+    mmc_connect("EMUMMC")
+    @checkInput = setInt(1); 
+}
+
+if (@checkInput, == , 0){
+    exit()
+}
+
+mmc_mount("SYSTEM")
+
+if (@RESULT){
+    printf("System failed to mount!")
+    pause()
+    exit()
+}
+
+setString("emmc:/save/", $basePath)
+
+setColor("RED")
+printf("Are you sure you want to wipe everything?")
+printf("This includes:")
+printf("- Saves")
+printf("- Game Data")
+printf("- All other data on the system")
+printf("")
+printf("Use this only as a last resort!")
+printf("")
+
+setColor("YELLOW")
+wait(10)
+
+printf("Press X to continue")
+printf("Press any other button to exit")
+
+pause()
+
+if (@BTN_X, == , 0){
+    exit()
+}
+
+@count = setInt(1)
+printf("Deleting SYSTEM saves")
+
+fs_openDir("emmc:/save")
+setColor("RED")
+@LOOP = getPosition()
+fs_readDir()
+if (@ISDIRVALID){
+    combineStrings($basePath, $FILENAME, $path)
+
+    setPrintPos(0, 20)
+	
+    @check = compareStrings($FILENAME, "8000000000000120")
+
+    if (@check){
+        goto(@LOOP)
+    }
+
+    @check = compareStrings($FILENAME, "80000000000000d1")
+
+    if (@check){
+        goto(@LOOP)
+    }
+
+    @check = compareStrings($FILENAME, "8000000000000047")
+
+    if (@check){
+        goto(@LOOP)
+    }
+
+	@count = math(@count, "+", 1)
+    printf(@count, ": ", $FILENAME)
+    fs_del($path)
+
+    goto(@LOOP)
+}
+
+printf("")
+printf("")
+printf("Deleting USER")
+
+mmc_mount("USER")
+
+if (@RESULT){
+    printf("User failed to mount!")
+    pause()
+    exit()
+}
+
+fs_delRecursive("emmc:/Album")
+fs_mkdir("emmc:/Album")
+
+fs_delRecursive("emmc:/Contents")
+fs_mkdir("emmc:/Contents")
+fs_mkdir("emmc:/Contents/placehld")
+fs_mkdir("emmc:/Contents/registered")
+
+fs_delRecursive("emmc:/save")
+fs_mkdir("emmc:/save")
+
+fs_delRecursive("emmc:/saveMeta")
+fs_mkdir("emmc:/saveMeta")
+
+fs_delRecursive("emmc:/temp")
+fs_mkdir("emmc:/temp")
+
+setColor("GREEN")
+printf("")
+printf("")
+printf("Done! press any key to exit")
+
+pause()
+exit()

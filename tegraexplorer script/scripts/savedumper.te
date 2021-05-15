@@ -1,0 +1,71 @@
+printf("TegraScript save dumper")
+printf("")
+printf("What mmc would you like to dump from")
+printf("Press A for sysmmc")
+if (@EMUMMC) {
+	printf("Or press Y for emummc")
+}
+printf("Press any other button to exit")
+pause() 
+@checkInput = setInt(0);
+
+if (@BTN_A){
+    printf("Mounting SYSMMC...") 
+    mmc_connect("SYSMMC")
+    @checkInput = setInt(1);
+}
+if (@BTN_Y){
+    if (@EMUMMC, == , 0){
+        exit() 
+    }
+    printf("Mounting EMUMMC...") 
+    mmc_connect("EMUMMC")
+    @checkInput = setInt(1); 
+}
+
+if (@checkInput, == , 0){
+    exit()
+}
+
+printf("")
+printf("Which partition do you want to dump from? X for SYSTEM, Y for USER")
+pause()
+
+@checkInput = setInt(0);
+
+if (@BTN_X) {
+    printf("Mounting SYSTEM...")
+    mmc_mount("SYSTEM")
+    setString("systemSaves", $folder)
+	@checkInput = setInt(1);
+}
+
+if (@BTN_Y) {
+    printf("Mounting USER....")
+    mmc_mount("USER")
+    setString("userSaves", $folder)
+	@checkInput = setInt(1);
+}
+
+if (@checkInput, == , 0){
+    exit()
+}
+
+combineStrings("sd:/tegraexplorer/", $folder, $path)
+
+fs_mkdir("sd:/tegraexplorer")
+fs_mkdir($path)
+
+printf("")
+printf("Copying saves to ", $path)
+printf("")
+@check = fs_copyRecursive("emmc:/save", $path)
+printf("")
+if (@check){
+    printf("Something went wrong! Errcode: ", @check)
+}
+if (@check, == , 0){
+   printf("Done, press any button to exit")   
+}
+pause()
+exit()

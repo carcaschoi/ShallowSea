@@ -1,0 +1,230 @@
+setString("BOOT0.bin", $BOOT0Path) 
+setString("BOOT1.bin", $BOOT1Path) 
+setString("BCPKG2-1-Normal-Main", $BCPKG1) 
+setString("BCPKG2-2-Normal-Sub", $BCPKG2) 
+setString("BCPKG2-3-SafeMode-Main", $BCPKG3) 
+setString("BCPKG2-4-SafeMode-Sub", $BCPKG4) 
+setString("Exit
+", $menuoption1) 
+setString("BOOT: ", $menuoption2) 
+setString("SYSTEM: ", $menuoption3) 
+setString("
+SYSMMC", $menuoption4) 
+if (@EMUMMC){
+	setString("EMUMMC", $menuoption5) 
+}
+
+printf("System restore script")
+printf("")
+printf("Select what to restore")
+printf("And where to restore to")
+
+@selection = setInt(7)
+@restoreBOOT = setInt(1)
+@restoreSYS = setInt(1)
+@maxSelection = setInt(10)
+if (@EMUMMC){
+	@maxSelection = math(@maxSelection, "+", 1)
+}
+
+@optionLoop = getPosition()
+setPrintPos(0, 6) 
+@current = setInt(7) 
+
+@drawLoop = getPosition()
+
+setColor("WHITE") 
+setStringIndex(@current, $toDraw) 
+
+if (@current, "==", 8){
+	if (@restoreBOOT){
+		combineStrings($toDraw, "ON ", $toDraw) 
+	}
+	if (@restoreBOOT, "==", 0){
+		combineStrings($toDraw, "OFF", $toDraw) 
+	}
+}
+
+if (@current, "==", 9){
+	if (@restoreSYS){
+		combineStrings($toDraw, "ON " , $toDraw) 
+	}
+	if (@restoreSYS, "==", 0){
+		combineStrings($toDraw, "OFF", $toDraw) 
+	}
+}
+
+if (@selection, "==", @current){
+	setColor("VIOLET") 
+}
+
+printf($toDraw) 
+
+@current = math(@current, "+", 1) 
+
+if (@current, "<=", @maxSelection){
+	goto(@drawLoop) 
+}
+
+pause() 
+
+if (@BTN_DOWN){
+	if (@selection, "<", @maxSelection){
+		@selection = math(@selection, "+", 1) 
+	}
+}
+
+if (@BTN_UP){
+	if (@selection, ">", 7){
+		@selection = math(@selection, "-", 1) 
+	}
+}
+
+if (@BTN_A, "==", 0){
+	goto(@optionLoop) 
+}
+
+if (@selection, "==", 7){
+	exit() 
+}
+
+if (@selection, "==", 8){
+	@restoreBOOT = invert(@restoreBOOT) 
+	goto(@optionLoop) 
+}
+
+if (@selection, "==", 9){
+	@restoreSYS = invert(@restoreSYS) 
+	goto(@optionLoop) 
+}
+
+clearscreen() 
+setColor("WHITE") 
+printf("System restore script") 
+printf("") 
+
+if (@restoreBOOT){
+	printf("BOOT: ON") 
+}
+if (@restoreBOOT, "==", 0){
+	printf("BOOT: OFF") 
+}
+if (@restoreSYS){
+	printf("SYSTEM: ON") 
+}
+if (@restoreSYS, "==", 0){
+	printf("SYSTEM: OFF") 
+}
+
+printf("Checking requirements...") 
+printf("") 
+
+if (@restoreSYS){
+	fs_combinePath($CURRENTPATH, "SYSTEM", $path) 
+	@check = fs_exists($path) 
+	@checkinv = invert(@check) 
+	if (@checkinv){
+		printf("System DIR not found!") 
+		printf("Press any button to exit") 
+		pause() 
+		exit() 
+	}
+}
+
+if (@restoreBOOT){
+	fs_combinePath($CURRENTPATH, "boot.bis", $path) 
+	@check = fs_exists($path) 
+	if (@check, "==", 0){
+		printf("boot.bis not found!") 
+		printf("Press any button to exit") 
+		pause() 
+		exit() 
+	}
+	
+	fs_mkdir("sd:/tegraexplorer") 
+	fs_mkdir("sd:/tegraexplorer/bisextract") 
+	fs_extractBisFile($path, "sd:/tegraexplorer/bisextract") 
+}
+
+if (@selection, "==", 10){
+    printf("Mounting SYSMMC...") 
+    mmc_connect("SYSMMC") 
+}
+if (@selection, "==", 11){
+    if (@EMUMMC, "==", 0){
+        exit() 
+    }
+    printf("Mounting EMUMMC...") 
+    mmc_connect("EMUMMC") 
+}
+
+printf("Ready!") 
+
+setColor("RED") 
+printf("") 
+printf("WARNING!!!") 
+printf("If you do not know exactly what this does. STOP!!!") 
+printf("") 
+printf("This will fuck with your system!") 
+printf("Only do this as a last ditch recovery effort!") 
+printf("") 
+setColor("GREEN") 
+printf("For help go here: https://discord.gg/C29hYvh") 
+setColor("WHITE") 
+printf("") 
+wait(10) 
+printf("X to continue") 
+printf("Any other button to exit") 
+
+pause() 
+
+if (@BTN_X, "==", 0){
+	exit() 
+}
+
+clearscreen() 
+
+printf("GO!") 
+if (@restoreBOOT){
+	printf("") 
+	printf("Restoring BIS") 
+
+	@i = setInt(1) 
+	@loop = getPosition()
+	setStringIndex(@i, $part) 
+	combineStrings("sd:/tegraexplorer/bisextract/", $part, $path) 
+	mmc_restorePart($path) 
+	if (@RESULT){
+		setColor("RED") 
+		printf("Restoring went wrong!") 
+		printf("Part:") 
+		printf($part) 
+		pause() 
+		exit() 
+	}
+	@i = math(@i, "+", 1) 
+	if (@i, "<", 7){
+		goto(@loop) 
+	}
+}
+
+if (@restoreSYS){
+	printf("") 
+	printf("Restoring SYSTEM") 
+	mmc_mount("SYSTEM") 
+
+	fs_combinePath($CURRENTPATH, "SYSTEM/Contents/registered", $path) 
+
+	fs_delRecursive("emmc:/Contents/registered") 
+	fs_copyRecursive($path, "emmc:/Contents") 
+
+	fs_combinePath($CURRENTPATH, "SYSTEM/save/8000000000000120", $path) 
+
+	fs_copy($path, "emmc:/save/8000000000000120") 
+}
+
+printf("") 
+printf("Done!") 
+printf("Press any button to exit") 
+pause() 
+exit() 

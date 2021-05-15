@@ -1,0 +1,53 @@
+printf("Remove Parental Lock Kronos2308 -.-")
+printf("")
+printf("Press A to remove from SYSMMC")
+if (@EMUMMC){
+    printf("Press Y to remove from EMUMMC")
+}
+printf("Press power to exit")
+printf("")
+
+pause() 
+@checkInput = setInt(0);
+
+if (@BTN_A){
+    printf("Mounting SYSMMC...") 
+    mmc_connect("SYSMMC")
+    @checkInput = setInt(1);
+}
+if (@BTN_Y){
+    if (@EMUMMC, == , 0){
+        exit() 
+    }
+    printf("Mounting EMUMMC...") 
+    mmc_connect("EMUMMC")
+    @checkInput = setInt(1); 
+}
+
+if (@checkInput, == , 0){
+    exit()
+}
+
+mmc_mount("SYSTEM")
+
+if (@RESULT){
+    printf("System failed to mount!")
+    pause()
+    exit()
+}
+
+
+
+setColor("RED")
+printf("Deleting Parental Lock")
+
+fs_del("emmc:/save/8000000000000100")
+
+
+setColor("GREEN")
+printf("")
+printf("")
+printf("Done! press any key to exit")
+
+pause()
+exit()
