@@ -32,8 +32,10 @@ Nobody is responsible if you lose your data, brick your Switch, get banned, drop
 (On this fork, Me [yanisdreemurr](https://github.com/yanisdreemurr) and [carcaschoi](https://github.com/carcaschoi) will not be responsible for anything if your switch is banned from online mode.)
 
 # Credit:
-* [@carcaschoi](https://github.com/carcaschoi) 一 Creator of the ShallowSea project.
-* [@tim22263](https://github.com/tim22263) 一 Bootlogo & hbmenu theme (making the custom bootlogo & hbmenu theme for aio package.)
-* [91wii論壇網友分析ShallowSea整合包](
-https://www.91wii.com/thread-231061-1-1.html) Make a chinese review for ShallowSea aio package. (The Chinese language has been removed, but i leave  credit for the work!)
-* [@yanisdreemurr](https://github.com/yanisdreemurr) 一 Creator of this Fork.
+* ![Page 1](https://user-images.githubusercontent.com/46537034/118380472-42082b00-b5e2-11eb-9e48-1f6333e47b54.jpg)
+ https://github.com/carcaschoi
+* ![Page 1](https://user-images.githubusercontent.com/46537034/118380577-1b96bf80-b5e3-11eb-8f87-27da6e755fac.jpg)
+ https://github.com/tim22263
+* ![Page 1](https://user-images.githubusercontent.com/46537034/118380351-5dbf0180-b5e1-11eb-9336-d0bb179455af.jpg)
+ https://github.com/yanisdreemurr
+* [91wii論壇網友分析ShallowSea整合包](https://www.91wii.com/thread-231061-1-1.html) Make a chinese review for ShallowSea aio package. (The Chinese language has been removed, but i leave  credit for the work!)
