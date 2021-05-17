@@ -2,7 +2,7 @@
 
 ![Page 1](https://user-images.githubusercontent.com/46537034/118379925-a9bc7700-b5de-11eb-8280-9dfe3264e450.jpg)
 
-# [Click here to see the guide](https://github.com/yanisdreemurr/ShallowSea-Fork/wiki)
+# [Click here to see the guide](https://github.com/yanisdreemurr/ShallowSea-Online-Fork/wiki/1.-User-Guide)
 # ShallowSea-Fork
 The All-in-One CFW package for the Nintendo Switch with Atmosphere (fusee primary version).
 * You can download rcmloader package from [here](https://github.com/carcaschoi/rcmloader-package)
