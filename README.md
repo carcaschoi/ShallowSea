@@ -1,4 +1,4 @@
-# [It's a fork which sets up the Online mode with the Pack of "Shallow Sea" (version No risk ban), the real project is right here!](https://github.com/carcaschoi/ShallowSea)
+## [It's a fork which sets up the Online mode with the Pack of "Shallow Sea" (version No risk ban), the real project is right here!](https://github.com/carcaschoi/ShallowSea)
 
 ![Page 1](https://user-images.githubusercontent.com/46537034/118379925-a9bc7700-b5de-11eb-8280-9dfe3264e450.jpg)
 
