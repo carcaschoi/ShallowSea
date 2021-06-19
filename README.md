@@ -1,36 +1,34 @@
-## [It's a fork which sets up the Online mode with the Pack of "ShallowSea" (version No risk ban), the real project is right here!](https://github.com/carcaschoi/ShallowSea)
+Readme support: [English](https://github.com/carcaschoi/ShallowSea/blob/main/README-EN.md) / French / etc....
 
-![Page 1](https://user-images.githubusercontent.com/46537034/118379925-a9bc7700-b5de-11eb-8280-9dfe3264e450.jpg)
+![ShallowSea image](https://user-images.githubusercontent.com/64573431/115142050-358bc380-a072-11eb-855b-357475e4f3d7.jpg)
+# [按這裏看指南](https://github.com/carcaschoi/ShallowSea/blob/main/User%20guide.md)
+# ShallowSea
+Nintendo Switch with Atmosphere switch CFW 包（fusee-primary)。
 
-# [Click here to see the guide](https://github.com/yanisdreemurr/ShallowSea-Online-Fork/wiki/1.-User-Guide)
-# ShallowSea-Online-Fork
-The All-in-One CFW package for the Nintendo Switch with Atmosphere (fusee primary version).
-* You can download rcmloader package from [here](https://github.com/carcaschoi/rcmloader-package)
-* You can download switch firmware from [here](https://darthsternie.net/switch-firmwares/)
-* you may check [here](https://github.com/yanisdreemurr/ShallowSea-Fork/wiki/ShallowSea-homebrew-app-includes) to know what homebrew apps are included in ShallowSea
-### The youtube channel of carcaschoi : https://youtube.com/channel/UCgM5UuqyJQl38V8FI1l0wXw (Mainly NS aspect expands the software usage method 😄)
-# Feature
-* always up-to-date atmosphere with sigpatch
-* I have already setup hbg shop, [here is the setting](https://github.com/yanisdreemurr/ShallowSea/blob/main/tinfoil%20shop%20setup)
+支持 erista(v1) 和 mariko(v2 switch
+*[这里](https://github.com/carcaschoi/rcmloader-package)
+* 您可以下载交换机固件(系統固件) 从  [这里](https://darthsternie.net/switch-firmwares/)
+* 您可以查看  [这里](https://github.com/carcaschoi/ShallowSea/blob/main/ShallowSea%20homebrew%20app%20includes.md) ShallowSea 中包含哪些自制应用程序
+### 我的youtube頻道: https://youtube.com/channel/UCgM5UuqyJQl38V8FI1l0wXw (主要有NS方面擴展軟件使用方法😄)
+如果你发现一些有趣或有用的自制应用程序，你可以联系我，我可能会将它们添加到 ShallowSea
+# 特征
+* 使用 sigpatch 始终保持最新的氛围
+* (Ban protection) Incognito & 90dns host 应用在 sysnand 和 emuMMC
+* 我已经设置了hbg shop，[这里是设置](https://github.com/carcaschoi/ShallowSea/blob/main/tinfoil%20shop%20setup)
 
-# Donations
-### Donations are welcome! 😊 (for carcaschoi)
-* [Alipay](https://user-images.githubusercontent.com/64573431/114517581-0ee41c00-9c71-11eb-8230-d6b029fc9cc2.jpg)
-* [Bank card](https://user-images.githubusercontent.com/64573431/114518848-5fa84480-9c72-11eb-95aa-7809a6e3332d.jpg) - Chan Wai Hing
+# 捐款
+### 歡迎捐款😊
+* [支付寶](https://user-images.githubusercontent.com/64573431/114517581-0ee41c00-9c71-11eb-8230-d6b029fc9cc2.jpg)
+* [銀行卡](https://user-images.githubusercontent.com/64573431/114518848-5fa84480-9c72-11eb-95aa-7809a6e3332d.jpg) - Chan Wai Hing
 
-# Wiki
-[The wiki is here!](https://github.com/yanisdreemurr/ShallowSea-Fork/wiki)
+# 待办事项清单:
+* 整理Readme文件
+* 选择许可证
 
-# Liability:
-Nobody is responsible if you lose your data, brick your Switch, get banned, drop your Switch into the toilet, have your Switch stolen by ninjas, [etc 1](https://www.youtube.com/watch?v=XnwvYiMK3ik) [etc 2](https://www.youtube.com/playlist?list=PLK6G4JP74vhF7UQwzdcXfG2eLclu-GcEc), except yourself. By using ShallowSea or any form of homebrew in any capacity you understand the risks involved with running unsigned code on your Switch.
-
-(On this fork, Me [yanisdreemurr](https://github.com/yanisdreemurr) and [carcaschoi](https://github.com/carcaschoi) will not be responsible for anything if your switch is banned from online mode.)
-
+# 责任:
+如果您丢失数据、损坏您的 Switch、被禁止（尽管 ShallowSea 有禁令保护）、将您的 Switch 掉进马桶、让您的 Switch 被忍者偷走等 [1](https://www.youtube.com/watch?v=XnwvYiMK3ik) 等 [2](https://www.youtube.com/watch?v=6X5kP6NjDTw)，除了您自己之外，没有人负责。 通过以任何身份使用 ShallowSea 或任何形式的自制软件，您可以了解在 Switch 上运行未签名代码所涉及的风险。 
 # Credit:
-* ![Page 1](https://user-images.githubusercontent.com/46537034/118380472-42082b00-b5e2-11eb-9e48-1f6333e47b54.jpg)
- https://github.com/carcaschoi
-* ![Page 1](https://user-images.githubusercontent.com/46537034/118380577-1b96bf80-b5e3-11eb-8f87-27da6e755fac.jpg)
- https://github.com/tim22263
-* ![Page 1](https://user-images.githubusercontent.com/46537034/118380351-5dbf0180-b5e1-11eb-9336-d0bb179455af.jpg)
- https://github.com/yanisdreemurr
-* [91wii論壇網友分析ShallowSea整合包](https://www.91wii.com/thread-231061-1-1.html) Make a chinese review for ShallowSea aio package. (The Chinese language has been removed, but i leave  credit for the work!)
+* [@carcaschoi](https://github.com/carcaschoi) 一 维护 ShallowSea整合包 :)
+* [@tim22263 梵鈞](https://github.com/tim22263) 一 為ShallowSea整合包製作ShallowSea專用大氣層bootlogo & hbmenu theme
+* [91wii論壇網友分析ShallowSea整合包](
+https://www.91wii.com/thread-231061-1-1.html) 感谢91wii论坛坛友進行詳細分析和建议
