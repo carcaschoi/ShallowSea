@@ -26,7 +26,7 @@ Si vous trouvez une application homebrew intéressante ou utile, vous pouvez me 
 * Choisir une licence
 
 # Responsabilité:
-Personne n'est responsable si vous perdez vos données, brisez votre Switch, êtes banni (bien que ShallowSea ait une protection contre l'interdiction), déposez votre Switch dans les toilettes, faites voler votre Switch par des ninjas, [etc 1](https://www.youtube. com/watch?v=XnwvYiMK3ik) [etc 2](https://www.youtube.com/watch?v=6X5kP6NjDTw), sauf vous-même. En utilisant ShallowSea ou toute forme d'homebrew à quelque titre que ce soit, vous comprenez les risques liés à l'exécution de code non signé sur votre Switch.
+Personne n'est responsable si vous perdez vos données, brisez votre Switch, êtes banni (bien que ShallowSea ait une protection contre l'interdiction), déposez votre Switch dans les toilettes, faites voler votre Switch par des ninjas, [etc 1](https://www.youtube.com/watch?v=XnwvYiMK3ik) [etc 2](https://www.youtube.com/watch?v=6X5kP6NjDTw), sauf vous-même. En utilisant ShallowSea ou toute forme d'homebrew à quelque titre que ce soit, vous comprenez les risques liés à l'exécution de code non signé sur votre Switch.
 # Crédit:
 * [@carcaschoi](https://github.com/carcaschoi) 一 Maintenir le paquet ShallowSea aio :)
 * [@tim22263 梵鈞](https://github.com/tim22263) 一 Créez un logo de démarrage d'atmosphère spéciale ShallowSea et un thème hbmenu pour le package d'intégration ShallowSea.
