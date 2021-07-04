@@ -3,7 +3,7 @@ Readme support: [English](https://github.com/bettydreemurr/ShallowSea-Online-For
 ![ShallowSea image](https://user-images.githubusercontent.com/64573431/115142050-358bc380-a072-11eb-855b-357475e4f3d7.jpg)
 # [按這裏看指南](https://github.com/carcaschoi/ShallowSea/blob/main/User%20guide.md)
 # ShallowSea
-Nintendo Switch with Atmosphere switch CFW 包（fusee-primary)。
+Nintendo Switch大氣層整合包（fusee-primary and hekate as chainloader)。
 
 支持 erista(v1) 和 mariko(v2 switch
 *[这里](https://github.com/carcaschoi/rcmloader-package)
